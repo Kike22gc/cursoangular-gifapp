@@ -7,9 +7,9 @@ export class GifsService {
 
     public gifList: Gif[] = []
 
-    private _tagsHistory: string[] = [];
-    private apiKey: string = 'QfrncHUwhrgpe0pdM5WPuGyJ91Sot6FW'
-    private serviceURL:string = 'https://api.giphy.com/v1/gifs'
+    private _tagsHistory:   string[] = [];
+    private apiKey:         string = 'QfrncHUwhrgpe0pdM5WPuGyJ91Sot6FW'
+    private serviceURL:     string = 'https://api.giphy.com/v1/gifs'
 
     constructor(private http: HttpClient) { }
 
@@ -29,7 +29,7 @@ export class GifsService {
         this.http.get<SearchResponse>(`${this.serviceURL}/search`, {params})
         .subscribe( resp => {
             this.gifList = resp.data
-            console.log( {gifs: this.gifList})
+            console.log({gifs: this.gifList})
         })
     }
 

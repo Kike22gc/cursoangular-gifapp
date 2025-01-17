@@ -11,10 +11,10 @@ import { Gif } from '../../interfaces/gifs.interfaces';
 })
 export class HomePageComponent {
 
-  constructor (private gifService: GifsService) {}
+  constructor (private gifsService: GifsService) {}
 
   get gifs(): Gif[] {
-    return this.gifService.gifList
+    return this.gifsService.gifList
   }
 
  }
